@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api': {
-        target: 'http://192.168.88.132:8000',
+      '/preview': {
+        target: 'http://localhost:8000',
         changeOrigin: true,
         pathRewrite:function(path, req){
-          return path.replace('/api', 'preview')
+          return path.replace('/preview', 'preview')
         }
       }
     },
